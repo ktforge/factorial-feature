@@ -1,0 +1,14 @@
+{
+  "name": "factorial-feature",
+  "version": "1.0.0",
+  "description": "Factorial method built with test-driven development and Mocha, from Codecademy's Full-Stack Engineer path",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*_test.js"
+  },
+  "author": "DeVante Bush",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  }
+}
