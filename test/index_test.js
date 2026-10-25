@@ -1,9 +1,9 @@
 var assert = require("assert");
-var Calculate = require('../index.js');
+var Calculate = require("../index.js");
 
-describe('Calculate', () => {
-  describe('.factorial', () => {
-    it('returns 120 when the input is 5 (5! = 120)', () => {
+describe("Calculate", () => {
+  describe(".factorial", () => {
+    it("returns 120 when the input is 5 (5! = 120)", () => {
       // Setup
       const inputNumber = 5;
       const expectedResult = 120;
@@ -15,7 +15,7 @@ describe('Calculate', () => {
       assert.equal(result, expectedResult);
     });
 
-    it('returns 6 when the input is 3 (3! = 6)', () => {
+    it("returns 6 when the input is 3 (3! = 6)", () => {
       // Setup
       const inputNumber = 3;
       const expectedResult = 6;
@@ -27,7 +27,7 @@ describe('Calculate', () => {
       assert.equal(result, expectedResult);
     });
 
-    it('returns 1 when the input is 0 (0! = 1)', () => {
+    it("returns 1 when the input is 0 (0! = 1)", () => {
       // Setup
       const inputNumber = 0;
       const expectedResult = 1;
@@ -39,7 +39,7 @@ describe('Calculate', () => {
       assert.equal(result, expectedResult);
     });
 
-    it('throws an error for a negative number', () => {
+    it("throws an error for a negative number", () => {
       // Setup
       const inputNumber = -3;
 
@@ -50,7 +50,7 @@ describe('Calculate', () => {
       assert.throws(exercise, /non-negative integer/);
     });
 
-    it('throws an error for a decimal', () => {
+    it("throws an error for a decimal", () => {
       // Setup
       const inputNumber = 2.5;
 
@@ -61,9 +61,9 @@ describe('Calculate', () => {
       assert.throws(exercise, /non-negative integer/);
     });
 
-    it('throws an error for a non-number', () => {
+    it("throws an error for a non-number", () => {
       // Setup
-      const inputNumber = 'abc';
+      const inputNumber = "abc";
 
       // Exercise
       const exercise = () => Calculate.factorial(inputNumber);

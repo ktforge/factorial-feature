@@ -1,16 +1,15 @@
-// Calculate object that holds the factorial method
 const Calculate = {
-  // Returns n! for any non-negative integer
+  // n! for any whole number 0 or higher
   factorial(inputNumber) {
-    // Guard clause: only accept non-negative whole numbers
+    // stop early on negatives, decimals, or anything that isn't a number
     if (!Number.isInteger(inputNumber) || inputNumber < 0) {
-      throw new Error('Input must be a non-negative integer');
+      throw new Error("Input must be a non-negative integer");
     }
 
-    // Build [1, 2, ..., inputNumber] and multiply them together
+    // make [1, 2, ..., n] and multiply it all together (0 gives an empty list, so 1)
     const numbers = Array.from({ length: inputNumber }, (_, i) => i + 1);
     return numbers.reduce((total, number) => total * number, 1);
-  }
+  },
 };
 
 module.exports = Calculate;
